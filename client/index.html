@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Scrabble</title>
+
+    <script type="module" src="main.js" defer></script>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" type="image/png" href="https://e7.pngegg.com/pngimages/936/282/png-clipart-words-with-friends-scrabble-computer-icons-board-game-icon-miscellaneous-game.png" />
+</head>
+
+<body>
+    <div id="board"></div>
+    <div id="controls">
+        <label for="word">Letters: </label><input type="text" id="word" />
+        <label for="x">x: </label><input type="number" id="x" min="1" max="15" />
+        <label for="y">y: </label><input type="number" id="y" min="1" max="15" />
+        <select id="direction">
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+        </select>
+        <input type="button" value="Play!" id="play" />
+        <input type="button" value="Reset" id="reset" />
+        <input type="button" value="Shuffle" id="shuffle" />
+        <input type="button" value="End Game" id="endgame" />
+    </div>
+    <p class="center">It is <b id="turn"></b>'s turn!</p>
+    <p class="center"><input type="text" value="Player 1" id="p0-name" />'s rack (<span id="p0-score">0</span>):</p>
+    <div id="p0-rack" class="rack"></div>
+    <p class="center"><input type="text" value="Player 2" id="p1-name" />'s rack (<span id="p1-score">0</span>):</p>
+    <div id="p1-rack" class="rack"></div>
+    <br>
+
+    <div id='EOG'>
+        <table class='EOGTables'>
+            <thead id="HGhead">
+                <tr>
+                    <th colspan="2">Highest Game Scores</th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="HGTable">
+            </tbody>
+        </table>
+        <table class='EOGTables' id=HWStable>
+            <thead id="HWhead">
+                <tr>
+                    <th colspan="3">Highest Word Scores</th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Word</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="HWTable">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
